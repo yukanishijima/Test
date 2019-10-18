@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv");
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -16,9 +17,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || `mongodb://${process.env.username}:${process.env.password}@ds335648.mlab.com:35648/heroku_5r3crx87`);
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

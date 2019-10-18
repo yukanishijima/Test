@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
+  "homepage": "https://git.heroku.com/test-2019-10-17.git",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
